@@ -1,0 +1,28 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"lib": ["es2015", "es2016", "dom"],
+		"outDir": "./build/",
+		"sourceMap": true,
+		"noImplicitAny": true,
+		"module": "commonjs",
+		"jsx": "react",
+		"esModuleInterop": true,
+		"experimentalDecorators": true,
+		"allowSyntheticDefaultImports": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noImplicitThis": true,
+		"baseUrl": "./",
+		"strictNullChecks": true,
+		"paths": {
+			"@core": ["src/core"]
+		}
+	},
+	"include": [
+		"./src/js/**/*"
+	],
+	"exclude": [
+		"node_modules",
+		"**/*.test.ts"
+	]
+}

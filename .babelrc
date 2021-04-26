@@ -1,0 +1,26 @@
+{
+  "presets": ["@babel/react", "@babel/env", "@babel/preset-typescript"],
+  "plugins": [
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-transform-typescript",
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      }
+    ],
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": false,
+        "regenerator": true
+      }
+    ]
+  ]
+}

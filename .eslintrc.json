@@ -1,0 +1,119 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+	    "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/eslint-recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "react-hooks",
+        "@typescript-eslint"
+    ],
+    "overrides": [
+      {
+        "files": ["*.ts", "*.tsx"],
+        "rules": {
+          "@typescript-eslint/no-unused-vars": [2, { "args": "none" }]
+        }
+      }
+    ],
+    "rules": {
+        "indent" : ["error", 4],
+        "no-console": "warn",
+        "block-scoped-var": "error",
+        "guard-for-in": "off",
+        "no-alert": "error",
+        "no-case-declarations": "error",
+        "no-self-compare": "error",
+        "no-with": "error",
+        "dot-location": ["warn", "property"],
+        "no-control-regex": "warn",
+        "no-unused-vars": ["warn", {
+            "vars": "all",
+            "args": "none",
+            "varsIgnorePattern": "[iI]gnored?$"
+        }],
+	    "semi": ["warn", "always"],
+        "no-useless-constructor": "warn",
+        "no-cond-assign": "error",
+        "prefer-rest-params": "warn",
+        "require-yield": "warn",
+        "rest-spread-spacing": ["error", "never"],
+        "getter-return": ["error", {
+            "allowImplicit": true
+        }],
+        "no-mixed-spaces-and-tabs": "error",
+        "no-template-curly-in-string": "error",
+        "comma-dangle": ["error", {
+            "arrays": "only-multiline",
+            "objects": "only-multiline",
+            "imports": "only-multiline",
+            "exports": "only-multiline",
+            "functions": "ignore"
+        }],
+        "no-multi-spaces": ["error"],
+        "no-multiple-empty-lines": ["error"],
+        "key-spacing": ["error"],
+        "array-callback-return" : "warn",
+        "quotes" : ["error", "single", {
+            "avoidEscape": true
+        }],
+        "template-curly-spacing": [2, "always"],
+        "space-before-function-paren" : ["error", "never"],
+        "space-before-blocks": "error",
+        "function-paren-newline" : ["error", "multiline"],
+        "generator-star-spacing" : ["error", {
+            "before": false,
+            "after": true
+        }],
+        "space-infix-ops" : "error",
+        "padded-blocks" : ["error", "never"],
+        "space-in-parens" : ["error", "never"],
+        "array-bracket-spacing" : ["error", "never"],
+        "comma-spacing" : ["error", {
+            "before": false,
+            "after": true
+        }],
+        "func-call-spacing" : ["error", "never"],
+        "max-len": ["warn", {
+            "code": 120,
+            "ignoreUrls": true,
+            "ignoreTemplateLiterals": true,
+            "ignoreRegExpLiterals": true,
+            "ignoreStrings": true,
+            "ignoreComments": true
+        }],
+        "no-prototype-builtins": "warn",
+        "react/no-children-prop": "warn",
+        "react/jsx-closing-bracket-location": ["error", "line-aligned"],
+        "react/jsx-fragments": ["error", "syntax"],
+        "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
+        "react/jsx-props-no-multi-spaces": "error",
+        "react/jsx-tag-spacing": ["error", {"beforeSelfClosing": "always"}],
+	    "react/prop-types": 0,
+        "react/self-closing-comp": "error",
+        "react/jsx-curly-spacing": [2, {"when": "always", "children": true} ],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", "tab"],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "object-curly-spacing": ["error", "always"]
+    }
+}
